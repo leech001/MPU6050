@@ -1,0 +1,2 @@
+# MPU6050
+STM32 HAL library for GY-521 (MPU6050)
