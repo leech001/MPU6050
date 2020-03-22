@@ -66,7 +66,7 @@ Kalman_t KalmanY = {
 		.R_measure = 0.03f,
 };
 
-void MPU6050_Init(I2C_HandleTypeDef* I2Cx)
+uint8_t MPU6050_Init(I2C_HandleTypeDef* I2Cx)
 {
 	uint8_t check;
 	uint8_t Data;
@@ -94,8 +94,9 @@ void MPU6050_Init(I2C_HandleTypeDef* I2Cx)
 		// XG_ST=0,YG_ST=0,ZG_ST=0, FS_SEL=0 -> � 250 �/s
 		Data = 0x00;
 		HAL_I2C_Mem_Write(I2Cx, MPU6050_ADDR, GYRO_CONFIG_REG, 1, &Data, 1, i2c_timeout);
+		return 0;
 	}
-
+	return 1;
 }
 
 

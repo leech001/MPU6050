@@ -24,7 +24,7 @@ add int main (void) to the function section
 ```
 / * USER CODE BEGIN 2 * /
 
-MPU6050_Init (& hi2c1);
+while (MPU6050_Init(&hi2c1) == 1);
 
 / * USER CODE END 2 * /
 ```
@@ -38,7 +38,7 @@ while (1)
 / * USER CODE END WHILE * /
 
 / * USER CODE BEGIN 3 * /
-  MPU6050_Read_All (& hi2c1, & MPU6050);
+  MPU6050_Read_All(&hi2c1, &MPU6050);
   HAL_Delay (100);
 }
 / * USER CODE END 3 * /
@@ -74,7 +74,7 @@ MPU6050_t MPU6050;
 ```
 /* USER CODE BEGIN 2 */
 
-MPU6050_Init(&hi2c1);
+while (MPU6050_Init(&hi2c1) == 1);
 
 /* USER CODE END 2 */
 ```
