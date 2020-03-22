@@ -4,7 +4,12 @@
 A simple C library (STM32 HAL) for working with the GY-521 module (MPU6050) https://www.aliexpress.com/af/gy%25252d521.html?trafficChannel=af&d=y&CatId=0&SearchText=gy-521&ltype=affiliate&SortType= total_tranpro_desc & groupsort = 1 & page = 1
 
 Start and initialize the I2C bus using the STM32CubeMX.
+
+![I2C](https://github.com/leech001/MPU6050/tree/master/img/I2C_param.png)
+
 Configure STM32CubeMX by setting "General peripheral Initalizion as a pair of '.c / .h' file per peripheral" in the project settings.
+
+
 
 Copy the library header and source file to the appropriate project directories (Inc, Src).
 
@@ -54,6 +59,9 @@ The Kalman filter algorithm for calculating angles is taken from the project htt
 Простая библиотека на Си (STM32 HAL) для работы с модулем GY-521 (MPU6050) https://www.aliexpress.com/af/gy%25252d521.html?trafficChannel=af&d=y&CatId=0&SearchText=gy-521&ltype=affiliate&SortType=total_tranpro_desc&groupsort=1&page=1
 
 Запустите и инициализируйте шину I2C c помощью STM32CubeMX.
+
+![I2C](https://github.com/leech001/MPU6050/tree/master/img/I2C_param.png)
+
 Сконфигурируйте STM32CubeMX установив "General peripheral Initalizion as a pair of '.c/.h' file per peripheral" в настройках проекта.
 
 Скопируйте заголовочный и исходный файл библиотеки в соотвесвтующие директории проекта (Inc, Src).
