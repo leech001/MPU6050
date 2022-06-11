@@ -13,6 +13,10 @@
 #include <stdint.h>
 #include "i2c.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 // MPU6050 structure
 typedef struct
 {
@@ -59,3 +63,7 @@ void MPU6050_Read_Temp(I2C_HandleTypeDef *I2Cx, MPU6050_t *DataStruct);
 void MPU6050_Read_All(I2C_HandleTypeDef *I2Cx, MPU6050_t *DataStruct);
 
 double Kalman_getAngle(Kalman_t *Kalman, double newAngle, double newRate, double dt);
+
+#ifdef __cplusplus
+}
+#endif
