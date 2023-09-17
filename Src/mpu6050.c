@@ -182,8 +182,7 @@ void MPU6050_Read_All(I2C_HandleTypeDef *I2Cx, MPU6050_t *DataStruct)
     double dt = (double)(HAL_GetTick() - timer) / 1000;
     timer = HAL_GetTick();
     double roll;
-    double roll_sqrt = sqrt(
-        DataStruct->Accel_X_RAW * DataStruct->Accel_X_RAW + DataStruct->Accel_Z_RAW * DataStruct->Accel_Z_RAW);
+    double roll_sqrt = sqrt(pow(DataStruct->Accel_X_RAW, 2) + pow(DataStruct->Accel_Z_RAW, 2));
     if (roll_sqrt != 0.0)
     {
         roll = atan(DataStruct->Accel_Y_RAW / roll_sqrt) * RAD_TO_DEG;
